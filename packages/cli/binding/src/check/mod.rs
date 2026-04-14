@@ -40,7 +40,6 @@ pub(crate) async fn execute_check(
     let has_paths = !paths.is_empty();
     let mut fmt_fix_started: Option<Instant> = None;
     let mut deferred_lint_pass: Option<(String, String)> = None;
-    let resolved_vite_config = resolver.resolve_universal_vite_config().await?;
 
     if !no_fmt {
         let mut args = if fix { vec![] } else { vec!["--check".to_string()] };
@@ -115,6 +114,7 @@ pub(crate) async fn execute_check(
     }
 
     if !no_lint {
+        let resolved_vite_config = resolver.resolve_universal_vite_config().await?;
         let lint_message_kind =
             LintMessageKind::from_lint_config(resolved_vite_config.lint.as_ref());
         let mut args = Vec::new();
