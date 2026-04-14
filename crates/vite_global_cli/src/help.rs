@@ -760,6 +760,10 @@ fn delegated_help_doc(command: &str) -> Option<HelpDoc> {
                         row("--fix", "Auto-fix format and lint issues"),
                         row("--no-fmt", "Skip format check"),
                         row("--no-lint", "Skip lint check"),
+                        row(
+                            "--disable-nested-config",
+                            "Disable the automatic loading of nested configuration files (lint only)",
+                        ),
                         row("-h, --help", "Print help"),
                     ],
                 ),

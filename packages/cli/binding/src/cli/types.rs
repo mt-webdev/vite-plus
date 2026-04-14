@@ -93,6 +93,9 @@ pub enum SynthesizableSubcommand {
         /// Skip lint check
         #[arg(long = "no-lint")]
         no_lint: bool,
+        /// Disable the automatic loading of nested configuration files (forwarded to lint; ignored by fmt)
+        #[arg(long)]
+        disable_nested_config: bool,
         /// File paths to check (passed through to fmt and lint)
         #[arg(trailing_var_arg = true)]
         paths: Vec<String>,

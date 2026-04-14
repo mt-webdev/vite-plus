@@ -63,9 +63,17 @@ async fn execute_direct_subcommand(
     let cwd_arc: Arc<AbsolutePath> = cwd.clone().into();
 
     let status = match subcommand {
-        SynthesizableSubcommand::Check { fix, no_fmt, no_lint, paths } => {
+        SynthesizableSubcommand::Check { fix, no_fmt, no_lint, disable_nested_config, paths } => {
             return crate::check::execute_check(
-                &resolver, fix, no_fmt, no_lint, paths, &envs, cwd, &cwd_arc,
+                &resolver,
+                fix,
+                no_fmt,
+                no_lint,
+                disable_nested_config,
+                paths,
+                &envs,
+                cwd,
+                &cwd_arc,
             )
             .await;
         }

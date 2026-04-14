@@ -22,6 +22,7 @@ pub(crate) async fn execute_check(
     fix: bool,
     no_fmt: bool,
     no_lint: bool,
+    disable_nested_config: bool,
     paths: Vec<String>,
     envs: &Arc<FxHashMap<Arc<OsStr>, Arc<OsStr>>>,
     cwd: &AbsolutePathBuf,
@@ -127,6 +128,9 @@ pub(crate) async fn execute_check(
         // parser think linting never started. Force the default reporter here so the
         // captured output is stable across local and CI environments.
         args.push("--format=default".to_string());
+        if disable_nested_config {
+            args.push("--disable-nested-config".to_string());
+        }
         if has_paths {
             args.extend(paths.iter().cloned());
         }
