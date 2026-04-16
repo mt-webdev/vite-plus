@@ -20,7 +20,8 @@ const VSCODE_SETTINGS = {
 } as const;
 
 const VSCODE_EXTENSIONS = {
-  recommendations: ['VoidZero.vite-plus-extension-pack'],
+  recommendations: ['void-zero.vite-plus-extension-pack
+'],
 } as const;
 
 const ZED_SETTINGS = {

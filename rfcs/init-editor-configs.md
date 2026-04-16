@@ -54,7 +54,8 @@ Based on [oxc-vscode's own `.vscode/settings.json`](https://github.com/oxc-proje
 
 ```json
 {
-  "recommendations": ["VoidZero.vite-plus-extension-pack"]
+  "recommendations": ["void-zero.vite-plus-extension-pack
+"]
 }
 ```
 
@@ -126,10 +127,10 @@ The `EDITORS` array is designed to support additional editors in the future:
 ```typescript
 export const EDITORS = [
   {
-    id: 'vscode',
-    label: 'VSCode',
-    targetDir: '.vscode',
-    files: ['settings.json', 'extensions.json'],
+    id: "vscode",
+    label: "VSCode",
+    targetDir: ".vscode",
+    files: ["settings.json", "extensions.json"],
   },
   // Future: { id: 'jetbrains', label: 'JetBrains', targetDir: '.idea', files: [...] },
 ] as const;

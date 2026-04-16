@@ -1,10 +1,10 @@
 # IDE Integration
 
-Vite+ supports VS Code through the [Vite Plus Extension Pack](https://marketplace.visualstudio.com/items?itemName=VoidZero.vite-plus-extension-pack) and the VS Code settings that `vp create` and `vp migrate` can automatically write into your project.
+Vite+ supports VS Code through the [Vite Plus Extension Pack](https://marketplace.visualstudio.com/items?itemName=void-zero.vite-plus-extension-pack) and the VS Code settings that `vp create` and `vp migrate` can automatically write into your project.
 
 ## VS Code
 
-For the best VS Code experience with Vite+, install the [Vite Plus Extension Pack](https://marketplace.visualstudio.com/items?itemName=VoidZero.vite-plus-extension-pack). It currently includes:
+For the best VS Code experience with Vite+, install the [Vite Plus Extension Pack](https://marketplace.visualstudio.com/items?itemName=void-zero.vite-plus-extension-pack). It currently includes:
 
 - `Oxc` for formatting and linting via `vp check`
 - `Vitest` for test runs via `vp test`
@@ -17,7 +17,8 @@ You can also manually set up the VS Code config:
 
 ```json
 {
-  "recommendations": ["VoidZero.vite-plus-extension-pack"]
+  "recommendations": ["void-zero.vite-plus-extension-pack
+"]
 }
 ```
 
